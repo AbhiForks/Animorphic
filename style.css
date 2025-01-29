@@ -186,9 +186,9 @@ body {
 }
 
 
-#main {
+#main { 
     position: relative;
-    background-color: #151515;
+    background-color: black;
     z-index: 99;
 }
 
