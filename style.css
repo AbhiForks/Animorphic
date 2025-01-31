@@ -1,197 +1,184 @@
 @font-face {
-    font-family: "Plain Light";
-    src: url(./fonts/plain-regular-webfont.ttf);
+    font-family: "Plain Light"; /* Font family for plain light style */
+    src: url(./fonts/plain-regular-webfont.ttf); /* Source path for the regular webfont */
 }
 
 @font-face {
-    font-family: "Plain Light";
-    src: url(./fonts/plain-light-webfont.ttf);
+    font-family: "Plain Light"; /* Font family for plain light style */
+    src: url(./fonts/plain-light-webfont.ttf); /* Source path for the light webfont */
 }
 
 @font-face {
-    font-family: "silk serif";
-    src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+    font-family: "silk serif"; /* Font family for silk serif style */
+    src: url(./fonts/silkserif-regularitalic-webfont.ttf); /* Source path for the regular italic webfont */
 }
 
 @font-face {
-    font-family: "silk serif";
-    src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+    font-family: "silk serif"; /* Font family for silk serif style */
+    src: url(./fonts/silkserif-lightitalic-webfont.ttf); /* Source path for the light italic webfont */
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: "Plain Light";
-    color: #fff;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    -webkit-box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box; /* Cross-browser compatibility for box-sizing */
+    font-family: "Plain Light"; /* Default font family for the document */
+    color: #fff; /* Default text color set to white */
 }
 
 html,
 body {
-    height: 100%;
-    width: 100%;
+    height: 100%; /* Full height for html and body */
+    width: 100%; /* Full width for html and body */
 }
 
 body {
-    overflow-x: hidden;
-    cursor: none;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    cursor: none; /* Hide the default cursor */
 }
 
 .mousefollower {
-    border: 2px #fff;
-    background-color: rgb(255, 255, 255);
-    scale: 2;
-    mix-blend-mode: difference;
+    border: 2px #fff; /* White border for mouse follower */
+    background-color: rgb(255, 255, 255); /* White background color */
+    scale: 2; /* Double the size of the element */
+    mix-blend-mode: difference; /* Blend mode to create contrast with the background */
 }
 
 #loader {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 9999;
-    background-color: #030303;
-    padding: 25vh 10vw;
+    height: 100%; /* Full height for loader */
+    width: 100%; /* Full width for loader */
+    position: fixed; /* Fixed position for loader */
+    z-index: 9999; /* High stacking order for loader */
+    background-color: #030303; /* Black background color */
+    padding: 25vh 10vw; /* Vertical and horizontal padding */
 }
 
 .line {
-    /* background-color: red; */
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    overflow: hidden;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    gap: 3vw;
+    height: fit-content; /* Height adjusts to content */
+    overflow: hidden; /* Hide overflow content */
+    display: flex; /* Flexbox display for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 3vw; /* Spacing between items */
 }
 
 #line1-part1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    gap: 1vw;
-
+    display: flex; /* Flexbox display for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 1vw; /* Spacing between items */
 }
 
 #line1-part1 h5,
 #line1-part1 h6 {
-    font-size: 3vw;
-    font-weight: 100;
-    font-family: 'silk serif';
+    font-size: 3vw; /* Font size for headings */
+    font-weight: 100; /* Light font weight */
+    font-family: 'silk serif'; /* Use silk serif font family */
 }
 
 #line1-part1 h5 {
-    /* background-color: red; */
-    width: 5vw;
-    text-align: right;
+    width: 5vw; /* Width for alignment */
+    text-align: right; /* Align text to the right */
 }
 
 .line h1 {
-    font-size: 6.5vw;
-    text-transform: uppercase;
-    font-weight: 900;
+    font-size: 6.5vw; /* Large font size for headings */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: 900; /* Bold font weight */
 }
 
 .line h2 {
-    font-size: 5vw;
-    text-transform: uppercase;
-    font-weight: 900;
-    opacity: 0;
-    /* animation-name: loaderAnim */
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
+    font-size: 5vw; /* Smaller font size for subheadings */
+    text-transform: uppercase; /* Uppercase text */
+    font-weight: 900; /* Bold font weight */
+    opacity: 0; /* Initially hidden */
+    animation-duration: 2s; /* Animation duration */
+    animation-iteration-count: infinite; /* Infinite loop */
 }
 
 @-webkit-keyframes loaderAnime {
     0% {
-        font-family: "plain light";
-        -webkit-text-stroke: 1px #fff;
-        color: #fff;
-        font-weight: 500;
-        opacity: 1;
+        font-family: "plain light"; /* Font family for animation start */
+        -webkit-text-stroke: 1px #fff; /* Stroke effect */
+        color: #fff; /* White color */
+        font-weight: 500; /* Medium font weight */
+        opacity: 1; /* Fully visible */
     }
 
     48% {
-        font-family: "plain light";
-        -webkit-text-stroke: 1px #fff;
-        color: #fff;
-        font-weight: 500;
-        opacity: 0;
+        font-family: "plain light"; /* Consistent font family */
+        -webkit-text-stroke: 1px #fff; /* Stroke effect */
+        color: #fff; /* White color */
+        font-weight: 500; /* Medium font weight */
+        opacity: 0; /* Fade out */
     }
 
     50% {
-        font-family: 'silk serif';
-        -webkit-text-stroke: 1px #fff;
-        font-weight: 500;
-        color: transparent;
-        opacity: 1;
+        font-family: 'silk serif'; /* Switch to silk serif font */
+        -webkit-text-stroke: 1px #fff; /* Stroke effect */
+        font-weight: 500; /* Medium font weight */
+        color: transparent; /* Transparent color */
+        opacity: 1; /* Fully visible */
     }
 
     100% {
-        font-family: 'silk serif';
-        -webkit-text-stroke: 1px #fff;
-        font-weight: 500;
-        color: transparent;
-        opacity: 0;
+        font-family: 'silk serif'; /* Consistent font family */
+        -webkit-text-stroke: 1px #fff; /* Stroke effect */
+        font-weight: 500; /* Medium font weight */
+        color: transparent; /* Transparent color */
+        opacity: 0; /* Fade out */
     }
 }
 
 @keyframes loaderAnime {
     0% {
-        font-family: "plain light";
-        -webkit-text-stroke: 1px #fff;
-        color: #fff;
-        font-weight: 500;
-        opacity: 1;
+        font-family: "plain light"; /* Font family for animation start */
+        -webkit-text-stroke: 1px #fff; /* Stroke effect */
+        color: #fff; /* White color */
+        font-weight: 500; /* Medium font weight */
+        opacity: 1; /* Fully visible */
     }
 
     48% {
-        font-family: "plain light";
-        -webkit-text-stroke: 1px #fff;
-        color: #fff;
-        font-weight: 500;
-        opacity: 0;
+        font-family: "plain light"; /* Consistent font family */
+        -webkit-text-stroke: 1px #fff; /* Stroke effect */
+        color: #fff; /* White color */
+        font-weight: 500; /* Medium font weight */
+        opacity: 0; /* Fade out */
     }
 
     50% {
-        font-family: 'silk serif';
-        -webkit-text-stroke: 1px #fff;
-        font-weight: 500;
-        color: transparent;
-        opacity: 1;
+        font-family: 'silk serif'; /* Switch to silk serif font */
+        -webkit-text-stroke: 1px #fff; /* Stroke effect */
+        font-weight: 500; /* Medium font weight */
+        color: transparent; /* Transparent color */
+        opacity: 1; /* Fully visible */
     }
 
     100% {
-        font-family: 'silk serif';
-        -webkit-text-stroke: 1px #fff;
-        font-weight: 500;
-        color: transparent;
-        opacity: 0;
+        font-family: 'silk serif'; /* Consistent font family */
+        -webkit-text-stroke: 1px #fff; /* Stroke effect */
+        font-weight: 500; /* Medium font weight */
+        color: transparent; /* Transparent color */
+        opacity: 0; /* Fade out */
     }
 }
-
-
+/* 
+    main section styles
+*/
+/* 
+    main section styles
+*/
 #main { 
     position: relative;
     background-color: black;
     z-index: 99;
 }
 
+/* 
+    page1 styles
+*/
 #page1 {
     height: 100vh;
     width: 100%;
@@ -200,6 +187,9 @@ body {
     z-index: 100;
 }
 
+/* 
+    page1 navigation styles
+*/
 #page1 #nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -231,14 +221,15 @@ body {
     font-weight: 500;
 }
 
+/* 
+    hero section styles
+*/
 .hero {
-    /* background-color: red; */
     width: 72%;
     margin-left: 27%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    /* background-color: red; */
     overflow-y: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -247,11 +238,11 @@ body {
     -ms-flex-align: center;
     align-items: center;
 
-
 }
 
-
-
+/* 
+    hero section styles
+*/
 .hero:nth-child(2) {
     margin-top: 18vh;
 }
@@ -280,9 +271,6 @@ body {
     text-transform: uppercase;
     line-height: 7.2vw;
     border-bottom: 0.5vw solid #fff;
-    /* padding-bottom: 0.8vw;
-    /* transition: all ease 0.3s; */
-
 }
 
 .hero h2:hover {
@@ -292,6 +280,9 @@ body {
     border-bottom: 0.5vw solid #ffffff00;
 }
 
+/* 
+    page2 styles
+*/
 #page2 {
     height: 100vh;
     width: 100%;
@@ -299,6 +290,9 @@ body {
     position: relative;
 }
 
+/* 
+    video container styles
+*/
 #video-container {
     height: 66vh;
     width: 71vw;
@@ -318,7 +312,9 @@ body {
     opacity: 0;
 }
 
-
+/* 
+    video cursor styles
+*/
 #video-cursor {
     background-color: #FFA63D;
     height: 9vw;
@@ -343,10 +339,12 @@ body {
     font-size: 2vw;
 }
 
+/* 
+    page3 styles
+*/
 #page3 {
     min-height: 100vh;
     width: 100%;
-    /* background-color: rgb(61, 61, 61); */
     position: relative;
     padding: 17vh 2vw;
     margin-bottom: 20vh;
@@ -375,8 +373,10 @@ body {
 
 }
 
+/* 
+    image div container styles
+*/
 #image-div-container {
-    /* background-color: red; */
     padding: 1vw;
     position: relative;
     display: -webkit-box;
@@ -392,6 +392,9 @@ body {
     flex-wrap: wrap;
 }
 
+/* 
+    image div styles
+*/
 .image-div {
     height: 42vw;
     width: 31vw;
@@ -400,7 +403,6 @@ body {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     margin: 1vw;
-    /* background-color: blue; */
 }
 
 .image-div:nth-child(1) {
@@ -417,6 +419,9 @@ body {
     object-position: center;
 }
 
+/* 
+    page3 circle 1 styles
+*/
 .page3-circle1 {
     height: 23vw;
     width: 23vw;
@@ -442,6 +447,9 @@ body {
     height: 30%;
 }
 
+/* 
+    page3 circle 2 styles
+*/
 .page3-circle2 {
     height: 23vw;
     width: 23vw;
@@ -451,13 +459,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    /* margin-top: 23vh; */
     -ms-flex-negative: 0;
     flex-shrink: 0;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    /* margin-left: 10vw; */
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -470,6 +476,9 @@ body {
     rotate: -45deg;
 }
 
+/* 
+    circle in styles
+*/
 .circle-in {
     height: 100%;
     width: 100%;
@@ -486,7 +495,6 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    /* display: ; */
     -webkit-transition: all ease 0.5s;
     -o-transition: all ease 0.5s;
     transition: all ease 0.5s;
@@ -518,15 +526,6 @@ body {
     opacity: 1;
 }
 
-.page3-circle2:hover .circle-in {
-    scale: 1;
-}
-
-.page3-circle2:hover p {
-    scale: 1;
-    opacity: 1;
-}
-
 
 
 
@@ -534,7 +533,6 @@ body {
     min-height: 100vh;
     position: relative;
     width: 100%;
-    /* background-color: rgb(61, 61, 61); */
     padding: 7vh 0;
 }
 

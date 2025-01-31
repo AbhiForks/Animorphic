@@ -1,10 +1,14 @@
 function locomotiveAnimation() {
+  gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin with GSAP
   gsap.registerPlugin(ScrollTrigger);
 
   const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"), // Select the element with id "main"
+    smooth: true, // Enable smooth scrolling
     el: document.querySelector("#main"),
     smooth: true,
   });
+  locoScroll.on("scroll", ScrollTrigger.update); // Update ScrollTrigger on scroll
   locoScroll.on("scroll", ScrollTrigger.update);
 
   ScrollTrigger.scrollerProxy("#main", {
@@ -115,7 +119,6 @@ function cursorAnimation() {
       top: "-15%",
     });
   });
-
   var flag = 0;
   videoContainer.addEventListener("click", function () {
     if (flag == 0) {
@@ -242,3 +245,5 @@ locomotiveAnimation();
 sheryAnimation();
 flagAnimation();
 footerAnimation();
+
+
